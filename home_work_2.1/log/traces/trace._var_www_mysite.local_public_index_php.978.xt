@@ -1,0 +1,62 @@
+TRACE START [2021-02-01 07:33:28]
+    0.0002     404432  +404432   -> {main}() /var/www/mysite.local/public/index.php:0
+    0.0002     407712    +3280     -> include(/var/www/mysite.local/config/config.php) /var/www/mysite.local/public/index.php:7
+    0.0002     407768      +56       -> define('PUBLIC_DIR', '/var/www/mysite.local/public/') /var/www/mysite.local/config/config.php:4
+    0.0003     407800                >=> TRUE
+    0.0003     407880     +112       -> define('TEMPLATES_DIR', '/var/www/mysite.local/public/../templates/') /var/www/mysite.local/config/config.php:5
+    0.0003     407912                >=> TRUE
+    0.0003     407976      +96       -> define('ENGINE_DIR', '/var/www/mysite.local/public/../engine/') /var/www/mysite.local/config/config.php:6
+    0.0003     408008                >=> TRUE
+    0.0003     408008      +32       -> define('LAYOUTS_DIR', 'layouts/') /var/www/mysite.local/config/config.php:7
+    0.0003     408040                >=> TRUE
+    0.0003     412936    +4928       -> include(/var/www/mysite.local/engine/functions.php) /var/www/mysite.local/config/config.php:9
+    0.0005     424408   +11472       -> include(/var/www/mysite.local/engine/log.php) /var/www/mysite.local/config/config.php:10
+    0.0007     448624   +24216       -> include(/var/www/mysite.local/engine/gallery.php) /var/www/mysite.local/config/config.php:11
+    0.0007     448624       +0         -> define('IMG_BIG', '/var/www/mysite.local/public//images/gallery_img/big/') /var/www/mysite.local/engine/gallery.php:68
+    0.0007     448656                  >=> TRUE
+    0.0007     448656      +32         -> define('IMG_SMALL', '/var/www/mysite.local/public//images/gallery_img/small/') /var/www/mysite.local/engine/gallery.php:69
+    0.0007     448688                  >=> TRUE
+    0.0007     441696    -6960     -> getImg($path = '/var/www/mysite.local/public//images/gallery_img/big/') /var/www/mysite.local/public/index.php:58
+    0.0007     441696       +0       -> scandir('/var/www/mysite.local/public//images/gallery_img/big/') /var/www/mysite.local/engine/gallery.php:109
+    0.0008     443576                >=> array (0 => '.', 1 => '..', 2 => '01.jpg', 3 => '02.jpg', 4 => '03.jpg', 5 => '04.jpg', 6 => '05.jpg', 7 => '06.jpg', 8 => '07.jpg', 9 => '08.jpg', 10 => '09.jpg', 11 => '10.jpg', 12 => '11.jpg', 13 => '12.jpg', 14 => '13.jpg', 15 => '14.jpg', 16 => '15.jpg')
+    0.0008     443600    +1904       -> array_splice(array (0 => '.', 1 => '..', 2 => '01.jpg', 3 => '02.jpg', 4 => '03.jpg', 5 => '04.jpg', 6 => '05.jpg', 7 => '06.jpg', 8 => '07.jpg', 9 => '08.jpg', 10 => '09.jpg', 11 => '10.jpg', 12 => '11.jpg', 13 => '12.jpg', 14 => '13.jpg', 15 => '14.jpg', 16 => '15.jpg'), 2) /var/www/mysite.local/engine/gallery.php:110
+    0.0008     443336                >=> array (0 => '01.jpg', 1 => '02.jpg', 2 => '03.jpg', 3 => '04.jpg', 4 => '05.jpg', 5 => '06.jpg', 6 => '07.jpg', 7 => '08.jpg', 8 => '09.jpg', 9 => '10.jpg', 10 => '11.jpg', 11 => '12.jpg', 12 => '13.jpg', 13 => '14.jpg', 14 => '15.jpg')
+    0.0008     442872              >=> array (0 => '01.jpg', 1 => '02.jpg', 2 => '03.jpg', 3 => '04.jpg', 4 => '05.jpg', 5 => '06.jpg', 6 => '07.jpg', 7 => '08.jpg', 8 => '09.jpg', 9 => '10.jpg', 10 => '11.jpg', 11 => '12.jpg', 12 => '13.jpg', 13 => '14.jpg', 14 => '15.jpg')
+    0.0008     443248     -352     -> render($page = 'gallery', $params = array ('imageArr' => array (0 => '01.jpg', 1 => '02.jpg', 2 => '03.jpg', 3 => '04.jpg', 4 => '05.jpg', 5 => '06.jpg', 6 => '07.jpg', 7 => '08.jpg', 8 => '09.jpg', 9 => '10.jpg', 10 => '11.jpg', 11 => '12.jpg', 12 => '13.jpg', 13 => '14.jpg', 14 => '15.jpg'), 'say' => '')) /var/www/mysite.local/public/index.php:64
+    0.0008     443296      +48       -> renderTemplate($page = 'gallery', $params = array ('imageArr' => array (0 => '01.jpg', 1 => '02.jpg', 2 => '03.jpg', 3 => '04.jpg', 4 => '05.jpg', 5 => '06.jpg', 6 => '07.jpg', 7 => '08.jpg', 8 => '09.jpg', 9 => '10.jpg', 10 => '11.jpg', 11 => '12.jpg', 12 => '13.jpg', 13 => '14.jpg', 14 => '15.jpg'), 'say' => '')) /var/www/mysite.local/engine/functions.php:14
+    0.0009     443296       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0009     459808                  >=> TRUE
+    0.0009     459832   +16536         -> extract(array ('imageArr' => array (0 => '01.jpg', 1 => '02.jpg', 2 => '03.jpg', 3 => '04.jpg', 4 => '05.jpg', 5 => '06.jpg', 6 => '07.jpg', 7 => '08.jpg', 8 => '09.jpg', 9 => '10.jpg', 10 => '11.jpg', 11 => '12.jpg', 12 => '13.jpg', 13 => '14.jpg', 14 => '15.jpg'), 'say' => '')) /var/www/mysite.local/engine/functions.php:26
+    0.0009     460208                  >=> 2
+    0.0009     460288     +456         -> file_exists('/var/www/mysite.local/public/../templates/gallery.php') /var/www/mysite.local/engine/functions.php:30
+    0.0009     460288                  >=> TRUE
+    0.0009     462224    +1936         -> include(/var/www/mysite.local/templates/gallery.php) /var/www/mysite.local/engine/functions.php:31
+    0.0009     461064    -1160         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0009     447624                  >=> '<div id="main">\r\n    <div class="post_title"><h2>Моя галерея</h2></div>\r\n    <div class="gallery">\r\n                    <a rel="gallery" class="photo" href="images/gallery_img/big/01.jpg"><img src="images/gallery_img/small/01.jpg" width="150" height="100" /></a>\r\n                    <a rel="gallery" class="photo" href="images/gallery_img/big/02.jpg"><img src="images/gallery_img/small/02.jpg" width="150" height="100" /></a>\r\n                    <a rel="gallery" class="photo" href="images/...'
+    0.0010     447520                >=> '<div id="main">\r\n    <div class="post_title"><h2>Моя галерея</h2></div>\r\n    <div class="gallery">\r\n                    <a rel="gallery" class="photo" href="images/gallery_img/big/01.jpg"><img src="images/gallery_img/small/01.jpg" width="150" height="100" /></a>\r\n                    <a rel="gallery" class="photo" href="images/gallery_img/big/02.jpg"><img src="images/gallery_img/small/02.jpg" width="150" height="100" /></a>\r\n                    <a rel="gallery" class="photo" href="images/...'
+    0.0010     447896   -13168       -> renderTemplate($page = 'menu', $params = ???) /var/www/mysite.local/engine/functions.php:15
+    0.0010     447896       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0010     464408                  >=> TRUE
+    0.0010     464432   +16536         -> extract(array ()) /var/www/mysite.local/engine/functions.php:26
+    0.0010     464432                  >=> 0
+    0.0010     464512      +80         -> file_exists('/var/www/mysite.local/public/../templates/menu.php') /var/www/mysite.local/engine/functions.php:30
+    0.0010     464512                  >=> TRUE
+    0.0010     465216     +704         -> include(/var/www/mysite.local/templates/menu.php) /var/www/mysite.local/engine/functions.php:31
+    0.0010     464848     -368         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0010     448592                  >=> '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>'
+    0.0010     448488                >=> '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>'
+    0.0010     448488   -16360       -> renderTemplate($page = 'layouts/gallery__layout', $params = array ('content' => '<div id="main">\r\n    <div class="post_title"><h2>Моя галерея</h2></div>\r\n    <div class="gallery">\r\n                    <a rel="gallery" class="photo" href="images/gallery_img/big/01.jpg"><img src="images/gallery_img/small/01.jpg" width="150" height="100" /></a>\r\n                    <a rel="gallery" class="photo" href="images/gallery_img/big/02.jpg"><img src="images/gallery_img/small/02.jpg" width="150" height="100" /></a>\r\n                    <a rel="gallery" class="photo" href="images/...', 'menu' => '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>')) /var/www/mysite.local/engine/functions.php:15
+    0.0011     448488       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0011     465000                  >=> TRUE
+    0.0011     465024   +16536         -> extract(array ('content' => '<div id="main">\r\n    <div class="post_title"><h2>Моя галерея</h2></div>\r\n    <div class="gallery">\r\n                    <a rel="gallery" class="photo" href="images/gallery_img/big/01.jpg"><img src="images/gallery_img/small/01.jpg" width="150" height="100" /></a>\r\n                    <a rel="gallery" class="photo" href="images/gallery_img/big/02.jpg"><img src="images/gallery_img/small/02.jpg" width="150" height="100" /></a>\r\n                    <a rel="gallery" class="photo" href="images/...', 'menu' => '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>')) /var/www/mysite.local/engine/functions.php:26
+    0.0011     465024                  >=> 2
+    0.0011     465120      +96         -> file_exists('/var/www/mysite.local/public/../templates/layouts/gallery__layout.php') /var/www/mysite.local/engine/functions.php:30
+    0.0011     465120                  >=> TRUE
+    0.0011     467032    +1912         -> include(/var/www/mysite.local/templates/layouts/gallery__layout.php) /var/www/mysite.local/engine/functions.php:31
+    0.0011     466328     -704         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0011     453912                  >=> '<!DOCTYPE html>\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Моя галерея</title>\r\n    <link rel="stylesheet" type="text/css" href="/css/style.css"/>\r\n    <script type="text/javascript" src="/js/scripts/jquery-1.4.3.min.js"></script>\r\n    <script type="text/javascript" src="/js/scripts/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>\r\n    <script type="text/javascript" src="/js/scripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>\r\n    <link rel="stylesheet" type="text/css...'
+    0.0011     453792                >=> '<!DOCTYPE html>\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Моя галерея</title>\r\n    <link rel="stylesheet" type="text/css" href="/css/style.css"/>\r\n    <script type="text/javascript" src="/js/scripts/jquery-1.4.3.min.js"></script>\r\n    <script type="text/javascript" src="/js/scripts/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>\r\n    <script type="text/javascript" src="/js/scripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>\r\n    <link rel="stylesheet" type="text/css...'
+    0.0012     450040              >=> '<!DOCTYPE html>\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Моя галерея</title>\r\n    <link rel="stylesheet" type="text/css" href="/css/style.css"/>\r\n    <script type="text/javascript" src="/js/scripts/jquery-1.4.3.min.js"></script>\r\n    <script type="text/javascript" src="/js/scripts/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>\r\n    <script type="text/javascript" src="/js/scripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>\r\n    <link rel="stylesheet" type="text/css...'
+    0.0012     358808
+TRACE END   [2021-02-01 07:33:28]
+
