@@ -1,0 +1,9 @@
+TRACE START [2021-02-01 08:11:25]
+    0.0002     405936  +405936   -> {main}() /var/www/mysite.local/public/index.php:0
+    0.0003     410784    +4848   -> Error->__toString() UNKNOWN?:0
+    0.0003     410832      +48     -> Error->getTraceAsString() UNKNOWN?:0
+    0.0003     411088              >=> '#0 {main}'
+    0.0003     411040            >=> 'Error: Class \'Logger\' not found in /var/www/mysite.local/public/index.php:12\nStack trace:\n#0 {main}'
+    0.0004     331168
+TRACE END   [2021-02-01 08:11:25]
+

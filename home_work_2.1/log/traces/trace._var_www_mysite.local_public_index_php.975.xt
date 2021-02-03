@@ -1,0 +1,299 @@
+TRACE START [2021-02-01 07:50:58]
+    0.0002     405688  +405688   -> {main}() /var/www/mysite.local/public/index.php:0
+    0.0002     406816    +1128     -> require_once(/var/www/mysite.local/vendor/autoload.php) /var/www/mysite.local/public/index.php:6
+    0.0003     420392   +13576       -> require_once(/var/www/mysite.local/vendor/composer/autoload_real.php) /var/www/mysite.local/vendor/autoload.php:5
+    0.0004     420040     -352       -> ComposerAutoloaderInitf0b0d13a2dc1e7986708e8692064ee84::getLoader() /var/www/mysite.local/vendor/autoload.php:7
+    0.0004     425136    +5096         -> require(/var/www/mysite.local/vendor/composer/platform_check.php) /var/www/mysite.local/vendor/composer/autoload_real.php:25
+    0.0005     421088    -4048         -> spl_autoload_register(array (0 => 'ComposerAutoloaderInitf0b0d13a2dc1e7986708e8692064ee84', 1 => 'loadClassLoader'), TRUE, TRUE) /var/www/mysite.local/vendor/composer/autoload_real.php:27
+    0.0005     421608                  >=> TRUE
+    0.0005     421984     +896         -> spl_autoload_call('Composer\\Autoload\\ClassLoader') /var/www/mysite.local/vendor/composer/autoload_real.php:28
+    0.0005     422040      +56           -> ComposerAutoloaderInitf0b0d13a2dc1e7986708e8692064ee84::loadClassLoader($class = 'Composer\\Autoload\\ClassLoader') /var/www/mysite.local/vendor/composer/autoload_real.php:28
+    0.0009     473168   +51128             -> require(/var/www/mysite.local/vendor/composer/ClassLoader.php) /var/www/mysite.local/vendor/composer/autoload_real.php:12
+    0.0009     472720                    >=> NULL
+    0.0009     472664                  >=> NULL
+    0.0009     472888     -280         -> dirname('/var/www/mysite.local/vendor/composer/autoload_real.php') /var/www/mysite.local/vendor/composer/autoload_real.php:28
+    0.0009     472968                  >=> '/var/www/mysite.local/vendor/composer'
+    0.0009     472968      +80         -> dirname('/var/www/mysite.local/vendor/composer') /var/www/mysite.local/vendor/composer/autoload_real.php:28
+    0.0009     473032                  >=> '/var/www/mysite.local/vendor'
+    0.0009     472952      -16         -> Composer\Autoload\ClassLoader->__construct($vendorDir = '/var/www/mysite.local/vendor') /var/www/mysite.local/vendor/composer/autoload_real.php:28
+    0.0009     472952       +0         -> spl_autoload_unregister(array (0 => 'ComposerAutoloaderInitf0b0d13a2dc1e7986708e8692064ee84', 1 => 'loadClassLoader')) /var/www/mysite.local/vendor/composer/autoload_real.php:29
+    0.0009     472808                  >=> TRUE
+    0.0009     472808     -144         -> function_exists('zend_loader_file_encoded') /var/www/mysite.local/vendor/composer/autoload_real.php:31
+    0.0009     472808                  >=> FALSE
+    0.0010     479536    +6728         -> require(/var/www/mysite.local/vendor/composer/autoload_static.php) /var/www/mysite.local/vendor/composer/autoload_real.php:33
+    0.0010     479152     -384         -> Composer\Autoload\ComposerStaticInitf0b0d13a2dc1e7986708e8692064ee84::getInitializer($loader = class Composer\Autoload\ClassLoader { private $vendorDir = '/var/www/mysite.local/vendor'; private $prefixLengthsPsr4 = array (); private $prefixDirsPsr4 = array (); private $fallbackDirsPsr4 = array (); private $prefixesPsr0 = array (); private $fallbackDirsPsr0 = array (); private $useIncludePath = FALSE; private $classMap = array (); private $classMapAuthoritative = FALSE; private $missingClasses = array (); private $apcuPrefix = NULL }) /var/www/mysite.local/vendor/composer/autoload_real.php:35
+    0.0010     480544    +1392           -> Closure::bind(class Closure { public $static = array ('loader' => class Composer\Autoload\ClassLoader { ... }) }, NULL, 'Composer\\Autoload\\ClassLoader') /var/www/mysite.local/vendor/composer/autoload_static.php:42
+    0.0010     481368                    >=> class Closure { public $static = array ('loader' => class Composer\Autoload\ClassLoader { ... }) }
+    0.0010     480672                  >=> class Closure { public $static = array ('loader' => class Composer\Autoload\ClassLoader { ... }) }
+    0.0011     480672     +128         -> Composer\Autoload\ClassLoader::Composer\Autoload\{closure:/var/www/mysite.local/vendor/composer/autoload_static.php:37-42}() /var/www/mysite.local/vendor/composer/autoload_real.php:35
+    0.0011     479848     -824         -> Composer\Autoload\ClassLoader->register($prepend = TRUE) /var/www/mysite.local/vendor/composer/autoload_real.php:53
+    0.0011     480224     +376           -> spl_autoload_register(array (0 => class Composer\Autoload\ClassLoader { private $vendorDir = '/var/www/mysite.local/vendor'; private $prefixLengthsPsr4 = array (...); private $prefixDirsPsr4 = array (...); private $fallbackDirsPsr4 = array (...); private $prefixesPsr0 = array (...); private $fallbackDirsPsr0 = array (...); private $useIncludePath = FALSE; private $classMap = array (...); private $classMapAuthoritative = FALSE; private $missingClasses = array (...); private $apcuPrefix = NULL }, 1 => 'loadClass'), TRUE, TRUE) /var/www/mysite.local/vendor/composer/ClassLoader.php:311
+    0.0011     480352                    >=> TRUE
+    0.0011     480240                >=> class Composer\Autoload\ClassLoader { private $vendorDir = '/var/www/mysite.local/vendor'; private $prefixLengthsPsr4 = array ('P' => array (...), 'M' => array (...)); private $prefixDirsPsr4 = array ('Psr\Log\' => array (...), 'Monolog\' => array (...)); private $fallbackDirsPsr4 = array (); private $prefixesPsr0 = array (); private $fallbackDirsPsr0 = array (); private $useIncludePath = FALSE; private $classMap = array ('Composer\InstalledVersions' => '/var/www/mysite.local/vendor/composer/../composer/InstalledVersions.php'); private $classMapAuthoritative = FALSE; private $missingClasses = array (); private $apcuPrefix = NULL }
+    0.0011     479512     -712     -> spl_autoload_call('Monolog\\Logger') /var/www/mysite.local/public/index.php:12
+    0.0011     479552      +40       -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Logger') /var/www/mysite.local/public/index.php:12
+    0.0011     479552       +0         -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Logger') /var/www/mysite.local/vendor/composer/ClassLoader.php:343
+    0.0011     479552       +0           -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Logger', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0012     479552       +0             -> strtr('Monolog\\Logger', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:405
+    0.0012     479592                      >=> 'Monolog/Logger'
+    0.0012     479600      +48             -> strrpos('Monolog\\Logger', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0012     479600                      >=> 7
+    0.0012     479600       +0             -> substr('Monolog\\Logger', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0012     479632                      >=> 'Monolog'
+    0.0012     479672      +72             -> substr('Monolog/Logger.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:414
+    0.0012     479712                      >=> 'Logger.php'
+    0.0012     479824     +152             -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Logger.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:416
+    0.0017     479824                      >=> TRUE
+    0.0017     479664                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Logger.php'
+    0.0017     479664                  >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Logger.php'
+    0.0017     479664     -160         -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Logger.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:344
+    0.0025     551968   +72304           -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:476
+    0.0025     551968       +0             -> spl_autoload_call('Psr\\Log\\LoggerInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:28
+    0.0025     552016      +48               -> Composer\Autoload\ClassLoader->loadClass($class = 'Psr\\Log\\LoggerInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:28
+    0.0025     552016       +0                 -> Composer\Autoload\ClassLoader->findFile($class = 'Psr\\Log\\LoggerInterface') /var/www/mysite.local/vendor/composer/ClassLoader.php:343
+    0.0025     552016       +0                   -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Psr\\Log\\LoggerInterface', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0025     552016       +0                     -> strtr('Psr\\Log\\LoggerInterface', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:405
+    0.0025     552064                              >=> 'Psr/Log/LoggerInterface'
+    0.0025     552072      +56                     -> strrpos('Psr\\Log\\LoggerInterface', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0025     552072                              >=> 7
+    0.0025     552072       +0                     -> substr('Psr\\Log\\LoggerInterface', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0025     552104                              >=> 'Psr\\Log'
+    0.0025     552144      +72                     -> substr('Psr/Log/LoggerInterface.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:414
+    0.0025     552192                              >=> 'LoggerInterface.php'
+    0.0025     552304     +160                     -> file_exists('/var/www/mysite.local/vendor/composer/../psr/log/Psr/Log/LoggerInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:416
+    0.0026     552304                              >=> TRUE
+    0.0026     552128                            >=> '/var/www/mysite.local/vendor/composer/../psr/log/Psr/Log/LoggerInterface.php'
+    0.0026     552128                          >=> '/var/www/mysite.local/vendor/composer/../psr/log/Psr/Log/LoggerInterface.php'
+    0.0026     552128     -176                 -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../psr/log/Psr/Log/LoggerInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:344
+    0.0029     560056    +7928                   -> include(/var/www/mysite.local/vendor/psr/log/Psr/Log/LoggerInterface.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:476
+    0.0029     559560                        >=> TRUE
+    0.0030     559512                      >=> NULL
+    0.0030     559520     -536             -> spl_autoload_call('Monolog\\ResettableInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:28
+    0.0030     559576      +56               -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\ResettableInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:28
+    0.0030     559576       +0                 -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\ResettableInterface') /var/www/mysite.local/vendor/composer/ClassLoader.php:343
+    0.0030     559576       +0                   -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\ResettableInterface', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0030     559576       +0                     -> strtr('Monolog\\ResettableInterface', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:405
+    0.0030     559632                              >=> 'Monolog/ResettableInterface'
+    0.0030     559632      +56                     -> strrpos('Monolog\\ResettableInterface', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0030     559632                              >=> 7
+    0.0030     559632       +0                     -> substr('Monolog\\ResettableInterface', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0030     559664                              >=> 'Monolog'
+    0.0030     559704      +72                     -> substr('Monolog/ResettableInterface.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:414
+    0.0030     559752                              >=> 'ResettableInterface.php'
+    0.0030     559888     +184                     -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/ResettableInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:416
+    0.0031     559888                              >=> TRUE
+    0.0031     559704                            >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/ResettableInterface.php'
+    0.0031     559704                          >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/ResettableInterface.php'
+    0.0031     559704     -184                 -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/ResettableInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:344
+    0.0033     562240    +2536                   -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/ResettableInterface.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:476
+    0.0033     561728                        >=> TRUE
+    0.0033     561672                      >=> NULL
+    0.0033     560824                >=> TRUE
+    0.0033     560784              >=> NULL
+    0.0033     560296    -1944     -> Monolog\Logger->__construct($name = 'memory', $handlers = ???, $processors = ???) /var/www/mysite.local/public/index.php:12
+    0.0033     560296       +0       -> Monolog\Logger->setHandlers($handlers = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:150
+    0.0033     560296       +0         -> array_reverse(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:213
+    0.0033     560352                  >=> array ()
+    0.0033     560296       +0     -> spl_autoload_call('Monolog\\Handler\\StreamHandler') /var/www/mysite.local/public/index.php:13
+    0.0034     560352      +56       -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Handler\\StreamHandler') /var/www/mysite.local/public/index.php:13
+    0.0034     560352       +0         -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Handler\\StreamHandler') /var/www/mysite.local/vendor/composer/ClassLoader.php:343
+    0.0034     560352       +0           -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Handler\\StreamHandler', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0034     560352       +0             -> strtr('Monolog\\Handler\\StreamHandler', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:405
+    0.0034     560408                      >=> 'Monolog/Handler/StreamHandler'
+    0.0034     560416      +64             -> strrpos('Monolog\\Handler\\StreamHandler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0034     560416                      >=> 15
+    0.0034     560416       +0             -> substr('Monolog\\Handler\\StreamHandler', 0, 15) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0034     560456                      >=> 'Monolog\\Handler'
+    0.0034     560504      +88             -> strrpos('Monolog\\Handler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0034     560504                      >=> 7
+    0.0034     560504       +0             -> substr('Monolog\\Handler', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0034     560536                      >=> 'Monolog'
+    0.0034     560488      -16             -> substr('Monolog/Handler/StreamHandler.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:414
+    0.0034     560544                      >=> 'Handler/StreamHandler.php'
+    0.0034     560672     +184             -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/StreamHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:416
+    0.0039     560672                      >=> TRUE
+    0.0039     560480                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/StreamHandler.php'
+    0.0039     560480                  >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/StreamHandler.php'
+    0.0039     560480     -192         -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/StreamHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:344
+    0.0044     589096   +28616           -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:476
+    0.0044     589096       +0             -> spl_autoload_call('Monolog\\Handler\\AbstractProcessingHandler') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:24
+    0.0044     589176      +80               -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Handler\\AbstractProcessingHandler') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:24
+    0.0044     589176       +0                 -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Handler\\AbstractProcessingHandler') /var/www/mysite.local/vendor/composer/ClassLoader.php:343
+    0.0044     589176       +0                   -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Handler\\AbstractProcessingHandler', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0045     589176       +0                     -> strtr('Monolog\\Handler\\AbstractProcessingHandler', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:405
+    0.0045     589256                              >=> 'Monolog/Handler/AbstractProcessingHandler'
+    0.0045     589256      +80                     -> strrpos('Monolog\\Handler\\AbstractProcessingHandler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0045     589256                              >=> 15
+    0.0045     589256       +0                     -> substr('Monolog\\Handler\\AbstractProcessingHandler', 0, 15) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0045     589296                              >=> 'Monolog\\Handler'
+    0.0045     589344      +88                     -> strrpos('Monolog\\Handler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0045     589344                              >=> 7
+    0.0045     589344       +0                     -> substr('Monolog\\Handler', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0045     589376                              >=> 'Monolog'
+    0.0045     589328      -16                     -> substr('Monolog/Handler/AbstractProcessingHandler.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:414
+    0.0045     589392                              >=> 'Handler/AbstractProcessingHandler.php'
+    0.0045     589552     +224                     -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:416
+    0.0045     589552                              >=> TRUE
+    0.0045     589336                            >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php'
+    0.0045     589336                          >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php'
+    0.0045     589336     -216                 -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:344
+    0.0048     594720    +5384                   -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:476
+    0.0049     594720       +0                     -> spl_autoload_call('Monolog\\Handler\\AbstractHandler') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:24
+    0.0049     594776      +56                       -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Handler\\AbstractHandler') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:24
+    0.0049     594776       +0                         -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Handler\\AbstractHandler') /var/www/mysite.local/vendor/composer/ClassLoader.php:343
+    0.0049     594776       +0                           -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Handler\\AbstractHandler', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0049     594776       +0                             -> strtr('Monolog\\Handler\\AbstractHandler', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:405
+    0.0049     594832                                      >=> 'Monolog/Handler/AbstractHandler'
+    0.0049     594840      +64                             -> strrpos('Monolog\\Handler\\AbstractHandler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0049     594840                                      >=> 15
+    0.0049     594840       +0                             -> substr('Monolog\\Handler\\AbstractHandler', 0, 15) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0049     594880                                      >=> 'Monolog\\Handler'
+    0.0049     594928      +88                             -> strrpos('Monolog\\Handler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0049     594928                                      >=> 7
+    0.0049     594928       +0                             -> substr('Monolog\\Handler', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0049     594960                                      >=> 'Monolog'
+    0.0049     594912      -16                             -> substr('Monolog/Handler/AbstractHandler.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:414
+    0.0049     594968                                      >=> 'Handler/AbstractHandler.php'
+    0.0049     595096     +184                             -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:416
+    0.0050     595096                                      >=> TRUE
+    0.0050     594904                                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractHandler.php'
+    0.0050     594904                                  >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractHandler.php'
+    0.0050     594904     -192                         -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:344
+    0.0054     610056   +15152                           -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:476
+    0.0054     610056       +0                             -> spl_autoload_call('Monolog\\Handler\\HandlerInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:24
+    0.0054     610120      +64                               -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Handler\\HandlerInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:24
+    0.0054     610120       +0                                 -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Handler\\HandlerInterface') /var/www/mysite.local/vendor/composer/ClassLoader.php:343
+    0.0054     610120       +0                                   -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Handler\\HandlerInterface', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0054     610120       +0                                     -> strtr('Monolog\\Handler\\HandlerInterface', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:405
+    0.0054     610184                                              >=> 'Monolog/Handler/HandlerInterface'
+    0.0054     610184      +64                                     -> strrpos('Monolog\\Handler\\HandlerInterface', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0055     610184                                              >=> 15
+    0.0055     610184       +0                                     -> substr('Monolog\\Handler\\HandlerInterface', 0, 15) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0055     610224                                              >=> 'Monolog\\Handler'
+    0.0055     610272      +88                                     -> strrpos('Monolog\\Handler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0055     610272                                              >=> 7
+    0.0055     610272       +0                                     -> substr('Monolog\\Handler', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0055     610304                                              >=> 'Monolog'
+    0.0055     610256      -16                                     -> substr('Monolog/Handler/HandlerInterface.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:414
+    0.0055     610312                                              >=> 'Handler/HandlerInterface.php'
+    0.0055     610440     +184                                     -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/HandlerInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:416
+    0.0055     610440                                              >=> TRUE
+    0.0055     610248                                            >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/HandlerInterface.php'
+    0.0055     610248                                          >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/HandlerInterface.php'
+    0.0055     610248     -192                                 -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/HandlerInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:344
+    0.0058     615592    +5344                                   -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/HandlerInterface.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:476
+    0.0058     615048                                        >=> TRUE
+    0.0058     614984                                      >=> NULL
+    0.0058     614192                                >=> TRUE
+    0.0058     614136                              >=> NULL
+    0.0058     614824                        >=> TRUE
+    0.0058     614744                      >=> NULL
+    0.0058     615112                >=> TRUE
+    0.0058     615056              >=> NULL
+    0.0059     615280     -312     -> Monolog\Handler\StreamHandler->__construct($stream = '../log/mem.log', $level = 100, $bubble = ???, $filePermission = ???, $useLocking = ???) /var/www/mysite.local/public/index.php:13
+    0.0059     615280       +0       -> Monolog\Handler\StreamHandler->__construct($level = 100, $bubble = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:45
+    0.0059     615280       +0         -> Monolog\Handler\StreamHandler->setLevel($level = 100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:41
+    0.0059     615280       +0           -> Monolog\Logger::toMonologLevel($level = 100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:127
+    0.0059     615280       +0             -> is_string(100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:530
+    0.0059     615280                      >=> FALSE
+    0.0059     615280                    >=> 100
+    0.0059     615280       +0       -> is_resource('../log/mem.log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:46
+    0.0059     615280                >=> FALSE
+    0.0059     615280       +0       -> is_string('../log/mem.log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:48
+    0.0059     615280                >=> TRUE
+    0.0059     615280       +0       -> spl_autoload_call('Monolog\\Utils') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:49
+    0.0059     615320      +40         -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Utils') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:49
+    0.0059     615320       +0           -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Utils') /var/www/mysite.local/vendor/composer/ClassLoader.php:343
+    0.0059     615320       +0             -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Utils', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0059     615320       +0               -> strtr('Monolog\\Utils', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:405
+    0.0060     615360                        >=> 'Monolog/Utils'
+    0.0060     615368      +48               -> strrpos('Monolog\\Utils', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:410
+    0.0060     615368                        >=> 7
+    0.0060     615368       +0               -> substr('Monolog\\Utils', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:411
+    0.0060     615400                        >=> 'Monolog'
+    0.0060     615440      +72               -> substr('Monolog/Utils.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:414
+    0.0060     615480                        >=> 'Utils.php'
+    0.0060     615592     +152               -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Utils.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:416
+    0.0060     615592                        >=> TRUE
+    0.0060     615432                      >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Utils.php'
+    0.0060     615432                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Utils.php'
+    0.0060     615432     -160           -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Utils.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:344
+    0.0064     642720   +27288             -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:476
+    0.0064     642224                  >=> TRUE
+    0.0064     642184                >=> NULL
+    0.0064     642184     -536       -> Monolog\Utils::canonicalizePath($streamUrl = '../log/mem.log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:49
+    0.0064     642184       +0         -> substr('../log/mem.log', 0, 7) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:36
+    0.0064     642216                  >=> '../log/'
+    0.0064     642184       +0         -> strpos('../log/mem.log', '://') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:42
+    0.0064     642184                  >=> FALSE
+    0.0064     642184       +0         -> substr('../log/mem.log', 0, 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:47
+    0.0064     642184                  >=> '.'
+    0.0064     642184       +0         -> substr('../log/mem.log', 1, 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:47
+    0.0064     642184                  >=> '.'
+    0.0064     642184       +0         -> substr('../log/mem.log', 0, 2) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:47
+    0.0064     642216                  >=> '..'
+    0.0064     642184       +0         -> getcwd() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:51
+    0.0064     642240                  >=> '/var/www/mysite.local/public'
+    0.0064     642264                >=> '/var/www/mysite.local/public/../log/mem.log'
+    0.0065     642264      +80     -> Monolog\Logger->pushHandler($handler = class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/public/../log/mem.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array () }) /var/www/mysite.local/public/index.php:13
+    0.0065     642984     +720       -> array_unshift(array (), class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/public/../log/mem.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array () }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:183
+    0.0065     643360                >=> 1
+    0.0065     646640    +3656     -> include(/var/www/mysite.local/config/config.php) /var/www/mysite.local/public/index.php:17
+    0.0065     646696      +56       -> define('PUBLIC_DIR', '/var/www/mysite.local/public/') /var/www/mysite.local/config/config.php:4
+    0.0065     646728                >=> TRUE
+    0.0065     646808     +112       -> define('TEMPLATES_DIR', '/var/www/mysite.local/public/../templates/') /var/www/mysite.local/config/config.php:5
+    0.0065     646840                >=> TRUE
+    0.0066     646904      +96       -> define('ENGINE_DIR', '/var/www/mysite.local/public/../engine/') /var/www/mysite.local/config/config.php:6
+    0.0066     646936                >=> TRUE
+    0.0066     646936      +32       -> define('LAYOUTS_DIR', 'layouts/') /var/www/mysite.local/config/config.php:7
+    0.0066     646968                >=> TRUE
+    0.0067     651832    +4896       -> include(/var/www/mysite.local/engine/functions.php) /var/www/mysite.local/config/config.php:9
+    0.0068     664584   +12752       -> include(/var/www/mysite.local/engine/log.php) /var/www/mysite.local/config/config.php:10
+    0.0069     688800   +24216       -> include(/var/www/mysite.local/engine/gallery.php) /var/www/mysite.local/config/config.php:11
+    0.0069     688800       +0         -> define('IMG_BIG', '/var/www/mysite.local/public//images/gallery_img/big/') /var/www/mysite.local/engine/gallery.php:68
+    0.0070     688832                  >=> TRUE
+    0.0070     688832      +32         -> define('IMG_SMALL', '/var/www/mysite.local/public//images/gallery_img/small/') /var/www/mysite.local/engine/gallery.php:69
+    0.0070     688864                  >=> TRUE
+    0.0070     682248    -6584     -> render($page = 'index', $params = array ('name' => 'Вася')) /var/www/mysite.local/public/index.php:74
+    0.0070     682288      +40       -> renderTemplate($page = 'index', $params = array ('name' => 'Вася')) /var/www/mysite.local/engine/functions.php:14
+    0.0070     682288       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0070     698800                  >=> TRUE
+    0.0070     698824   +16536         -> extract(array ('name' => 'Вася')) /var/www/mysite.local/engine/functions.php:26
+    0.0070     698824                  >=> 1
+    0.0070     698904      +80         -> file_exists('/var/www/mysite.local/public/../templates/index.php') /var/www/mysite.local/engine/functions.php:30
+    0.0070     698904                  >=> TRUE
+    0.0070     699664     +760         -> include(/var/www/mysite.local/templates/index.php) /var/www/mysite.local/engine/functions.php:31
+    0.0071     699144     -520         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0071     682760                  >=> 'Добро пожаловать Вася в наш магазин!<br>\r\n<img src="/images/01.jpg"\r\n'
+    0.0071     682656                >=> 'Добро пожаловать Вася в наш магазин!<br>\r\n<img src="/images/01.jpg"\r\n'
+    0.0071     683032   -16112       -> renderTemplate($page = 'menu', $params = ???) /var/www/mysite.local/engine/functions.php:15
+    0.0071     683032       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0071     699544                  >=> TRUE
+    0.0071     699568   +16536         -> extract(array ()) /var/www/mysite.local/engine/functions.php:26
+    0.0071     699568                  >=> 0
+    0.0071     699648      +80         -> file_exists('/var/www/mysite.local/public/../templates/menu.php') /var/www/mysite.local/engine/functions.php:30
+    0.0071     699648                  >=> TRUE
+    0.0071     700352     +704         -> include(/var/www/mysite.local/templates/menu.php) /var/www/mysite.local/engine/functions.php:31
+    0.0071     699984     -368         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0071     683728                  >=> '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>'
+    0.0071     683624                >=> '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>'
+    0.0071     683624   -16360       -> renderTemplate($page = 'layouts/layout', $params = array ('content' => 'Добро пожаловать Вася в наш магазин!<br>\r\n<img src="/images/01.jpg"\r\n', 'menu' => '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>')) /var/www/mysite.local/engine/functions.php:15
+    0.0071     683624       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0071     700136                  >=> TRUE
+    0.0071     700160   +16536         -> extract(array ('content' => 'Добро пожаловать Вася в наш магазин!<br>\r\n<img src="/images/01.jpg"\r\n', 'menu' => '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>')) /var/www/mysite.local/engine/functions.php:26
+    0.0072     700160                  >=> 2
+    0.0072     700256      +96         -> file_exists('/var/www/mysite.local/public/../templates/layouts/layout.php') /var/www/mysite.local/engine/functions.php:30
+    0.0072     700256                  >=> TRUE
+    0.0072     701168     +912         -> include(/var/www/mysite.local/templates/layouts/layout.php) /var/www/mysite.local/engine/functions.php:31
+    0.0072     700544     -624         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0072     684544                  >=> '<!doctype html>\r\n<html lang="en">\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>Добро пожаловать Вася в наш магазин!<br>\r\n<img src="/images/01.jpg"\r\n</body>\r\n</html>'
+    0.0072     684424                >=> '<!doctype html>\r\n<html lang="en">\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>Добро пожаловать Вася в наш магазин!<br>\r\n<img src="/images/01.jpg"\r\n</body>\r\n</html>'
+    0.0072     683624              >=> '<!doctype html>\r\n<html lang="en">\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>Добро пожаловать Вася в наш магазин!<br>\r\n<img src="/images/01.jpg"\r\n</body>\r\n</html>'
+    0.0072     673744   -26800   -> Monolog\Handler\StreamHandler->__destruct() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:0
+    0.0072     673744       +0     -> Monolog\Handler\StreamHandler->close() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:170
+    0.0072     673744       +0       -> is_resource(NULL) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:63
+    0.0072     673744                >=> FALSE
+    0.0073     673744            >=> NULL
+    0.0073     591496
+TRACE END   [2021-02-01 07:50:58]
+

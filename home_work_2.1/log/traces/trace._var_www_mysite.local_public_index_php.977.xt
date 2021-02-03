@@ -1,0 +1,56 @@
+TRACE START [2021-02-01 07:33:28]
+    0.0002     404448  +404448   -> {main}() /var/www/mysite.local/public/index.php:0
+    0.0003     407728    +3280     -> include(/var/www/mysite.local/config/config.php) /var/www/mysite.local/public/index.php:7
+    0.0003     407784      +56       -> define('PUBLIC_DIR', '/var/www/mysite.local/public/') /var/www/mysite.local/config/config.php:4
+    0.0003     407816                >=> TRUE
+    0.0003     407896     +112       -> define('TEMPLATES_DIR', '/var/www/mysite.local/public/../templates/') /var/www/mysite.local/config/config.php:5
+    0.0003     407928                >=> TRUE
+    0.0003     407992      +96       -> define('ENGINE_DIR', '/var/www/mysite.local/public/../engine/') /var/www/mysite.local/config/config.php:6
+    0.0003     408024                >=> TRUE
+    0.0003     408024      +32       -> define('LAYOUTS_DIR', 'layouts/') /var/www/mysite.local/config/config.php:7
+    0.0003     408056                >=> TRUE
+    0.0004     412952    +4928       -> include(/var/www/mysite.local/engine/functions.php) /var/www/mysite.local/config/config.php:9
+    0.0005     424424   +11472       -> include(/var/www/mysite.local/engine/log.php) /var/www/mysite.local/config/config.php:10
+    0.0007     448640   +24216       -> include(/var/www/mysite.local/engine/gallery.php) /var/www/mysite.local/config/config.php:11
+    0.0007     448640       +0         -> define('IMG_BIG', '/var/www/mysite.local/public//images/gallery_img/big/') /var/www/mysite.local/engine/gallery.php:68
+    0.0007     448672                  >=> TRUE
+    0.0007     448672      +32         -> define('IMG_SMALL', '/var/www/mysite.local/public//images/gallery_img/small/') /var/www/mysite.local/engine/gallery.php:69
+    0.0007     448704                  >=> TRUE
+    0.0007     441712    -6960     -> render($page = 'about', $params = array ()) /var/www/mysite.local/public/index.php:64
+    0.0008     441752      +40       -> renderTemplate($page = 'about', $params = array ()) /var/www/mysite.local/engine/functions.php:14
+    0.0008     441752       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0008     458264                  >=> TRUE
+    0.0008     458288   +16536         -> extract(array ()) /var/www/mysite.local/engine/functions.php:26
+    0.0008     458664                  >=> 0
+    0.0008     458744     +456         -> file_exists('/var/www/mysite.local/public/../templates/about.php') /var/www/mysite.local/engine/functions.php:30
+    0.0008     458744                  >=> TRUE
+    0.0008     459248     +504         -> include(/var/www/mysite.local/templates/about.php) /var/www/mysite.local/engine/functions.php:31
+    0.0008     458880     -368         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0008     442424                  >=> '<h2>Контакты</h2>'
+    0.0008     442320                >=> '<h2>Контакты</h2>'
+    0.0008     442696   -16184       -> renderTemplate($page = 'menu', $params = ???) /var/www/mysite.local/engine/functions.php:15
+    0.0008     442696       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0008     459208                  >=> TRUE
+    0.0008     459232   +16536         -> extract(array ()) /var/www/mysite.local/engine/functions.php:26
+    0.0008     459232                  >=> 0
+    0.0009     459312      +80         -> file_exists('/var/www/mysite.local/public/../templates/menu.php') /var/www/mysite.local/engine/functions.php:30
+    0.0009     459312                  >=> TRUE
+    0.0009     460016     +704         -> include(/var/www/mysite.local/templates/menu.php) /var/www/mysite.local/engine/functions.php:31
+    0.0009     459648     -368         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0009     443392                  >=> '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>'
+    0.0009     443288                >=> '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>'
+    0.0009     443288   -16360       -> renderTemplate($page = 'layouts/layout', $params = array ('content' => '<h2>Контакты</h2>', 'menu' => '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>')) /var/www/mysite.local/engine/functions.php:15
+    0.0009     443288       +0         -> ob_start() /var/www/mysite.local/engine/functions.php:23
+    0.0009     459800                  >=> TRUE
+    0.0009     459824   +16536         -> extract(array ('content' => '<h2>Контакты</h2>', 'menu' => '<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br>')) /var/www/mysite.local/engine/functions.php:26
+    0.0009     459824                  >=> 2
+    0.0009     459920      +96         -> file_exists('/var/www/mysite.local/public/../templates/layouts/layout.php') /var/www/mysite.local/engine/functions.php:30
+    0.0009     459920                  >=> TRUE
+    0.0010     460832     +912         -> include(/var/www/mysite.local/templates/layouts/layout.php) /var/www/mysite.local/engine/functions.php:31
+    0.0010     460208     -624         -> ob_get_clean() /var/www/mysite.local/engine/functions.php:36
+    0.0010     444144                  >=> '<!doctype html>\r\n<html lang="en">\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br><h2>Контакты</h2></body>\r\n</html>'
+    0.0010     444024                >=> '<!doctype html>\r\n<html lang="en">\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br><h2>Контакты</h2></body>\r\n</html>'
+    0.0010     443296              >=> '<!doctype html>\r\n<html lang="en">\r\n<head>\r\n    <meta charset="UTF-8">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n<a href="/">Главная</a>\r\n<a href="/?page=catalog">Каталог</a>\r\n<a href="/?page=about">О нас</a>\r\n<a href="/?page=gallery">Галлерея</a>\r\n<a href="/?page=apicatalog">api Test</a><br><h2>Контакты</h2></body>\r\n</html>'
+    0.0011     355760
+TRACE END   [2021-02-01 07:33:28]
+

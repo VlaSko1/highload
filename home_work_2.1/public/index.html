@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h2>Каталог</h2>
+<div id="catalog"></div>
+<script>
+
+    //Посылаем асинхронный запрос к api-бекенда на получение каталога в json-формате
+    (async () => {
+            try {
+                const response = await fetch('/?page=apicatalog');
+
+                //получаем ответ и парсим его в answer в виде объекта
+                const answer = await response.json();
+                console.log(answer.catalog);
+                //По полученным данным рендерим блок каталога и вставляем его в DOM
+                result = render(answer.catalog);
+            } catch (err) {
+                //В случае, если ответ не получен или в не правильном формате, выводим ошибку
+                result = "<span style='color:red'>Ошибка получения данных!</span>";
+            }
+            document.getElementById('catalog').innerHTML = result;
+        }
+    )();
+
+
+    //Функция рендера каталога
+    function render(catalog) {
+        let html = "";
+        for (item in catalog) {
+            html += "<div>" + catalog[item].name + "<br>";
+            html += "Цена: " + catalog[item].price + "<br>";
+            html += "<button>Купить</button></div>";
+            html += "<hr>";
+        }
+        return html;
+    }
+</script>
+</body>
+</html>
